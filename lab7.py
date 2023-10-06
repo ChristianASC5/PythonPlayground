@@ -41,26 +41,25 @@ def big_cities():
 # returns a dictionary indicating how many cities we have from each state.
 # For instance, if we have 10 cities from CA, one entry in the dictionary should be "CA" : 10
 # Hint: checkout the split function in python
-# def state_city_count():
-#     # Open file and read lines into variable {lines}
-#     file = open("us_city_population.txt", r)
-#     lines = file.readlines()
+def state_city_count():
+    # Open file and read lines into variable {lines}
+    file = open("us_city_population.txt", "r")
+    lines = file.readlines()
 
-#     # Create an empty dictionary to store output
-#     city_counts = dict()
+    # Create an empty dictionary to store output
+    states = dict()
 
-#     # Loop through the list of lines
-#     for line in lines:
-#         # Strip the newline character and split the string
-#         line_split = line.strip().split(',')
+    # Loop through the list of lines
+    for line in lines:
+        state = line.split(',')[0]
 
 
-#         if city['state'] in city_counts:
-#             city['state'] += 1
+        if state in states:
+            cities[city] += 1
 
-#         else:
-#             city['state'] = 0
-#     return {}
+        else:
+            city['state'] = 0
+    return {}
 
 # Q3) Some cities in different states have the same names.
 # For instance, Selma is a city in both CA and AL, while Sun City is both in AZ and CA.
